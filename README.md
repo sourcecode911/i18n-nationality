@@ -1,5 +1,5 @@
 [![CircleCI](https://circleci.com/gh/sourcecode911/i18n-nationality/tree/master.svg?style=svg)](https://circleci.com/gh/sourcecode911/i18n-nationality/tree/master)
-[![NPM version](https://badge.fury.io/js/i18n-nationality.png)](http://badge.fury.io/js/i18n-nationality)
+[![npm version](https://badge.fury.io/js/i18n-nationality.svg)](https://badge.fury.io/js/i18n-nationality)
 ![GitHub All Releases](https://img.shields.io/github/downloads/sourcecode911/i18n-nationality/total)
 [![Known Vulnerabilities](https://snyk.io//test/github/sourcecode911/i18n-nationality/badge.svg?targetFile=package.json)](https://snyk.io//test/github/sourcecode911/i18n-nationality?targetFile=package.json)
 [![GitHub issues](https://img.shields.io/github/issues/sourcecode911/i18n-nationality)](https://github.com/sourcecode911/i18n-nationality/issues)
