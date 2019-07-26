@@ -1,6 +1,6 @@
 {
     "locale": "en",
-    "nationality": {
+    "nationalities": {
         "AF": "Afghan",
         "AL": "Albanian",
         "DZ": "Algerian",
@@ -23,7 +23,7 @@
         "BM": "Bermuda",
         "BT": "Bhutanese",
         "BO": "Bolivian",
-        "BA": "Bosnian",
+        "BA": "Bosnian - Herzegovinian",
         "BW": "Batswana",
         "BV": "Bouvet Island",
         "BR": "Brazilian",
@@ -247,8 +247,5 @@
         "SX": "Sint Maarten (Dutch part)",
         "SS": "South Sudan",
         "XK": "Kosovo"
-        
-        "Herzegovinian",
-        "Northern Irish",
-        "Scottish",
     }
+}

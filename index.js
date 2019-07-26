@@ -1,6 +1,7 @@
 "use strict";
 
 var codes = require("./codes.json");
+var removeDiacritics = require('diacritics').remove;
 var registeredLocales = {};
 
 /*
@@ -28,11 +29,11 @@ function registerLocale(localeData) {
     throw new TypeError('Missing localeData.locale');
   }
 
-  if (!localeData.nationality) {
-    throw new TypeError('Missing localeData.nationality');
+  if (!localeData.nationalities) {
+    throw new TypeError('Missing localeData.nationalities');
   }
 
-  registeredLocales[localeData.locale] = localeData.nationality;
+  registeredLocales[localeData.locale] = localeData.nationalities;
 }
 
 exports.registerLocale = registerLocale;
@@ -141,7 +142,7 @@ exports.toAlpha2 = toAlpha2;
 
 /*
  * @param code ISO 3166-1 alpha-2, alpha-3 or numeric code
- * @param lang language for country name
+ * @param lang language for nationality name
  * @return name or undefined
  */
 exports.getName = function(code, lang) {
@@ -155,7 +156,7 @@ exports.getName = function(code, lang) {
 
 /*
  * @param lang language for nationality names
- * @return Object of nationality code mapped to county name
+ * @return Object of country code mapped to nationality name
  */
 exports.getNames = function(lang) {
   var d = registeredLocales[lang.toLowerCase()];
@@ -172,10 +173,34 @@ exports.getNames = function(lang) {
  */
 exports.getAlpha2Code = function(name, lang) {
   try {
+    console.log(registeredLocales);
     var p, codenames = registeredLocales[lang.toLowerCase()];
     for (p in codenames) {
       if (codenames.hasOwnProperty(p)) {
         if (codenames[p].toLowerCase() === name.toLowerCase()) {
+          return p;
+        }
+      }
+    }
+    return undefined;
+  } catch (err) {
+    return undefined;
+  }
+};
+
+/*
+ * @param name name
+ * @param lang language for nationality name
+ * @return ISO 3166-1 alpha-2 or undefined
+ */
+exports.getSimpleAlpha2Code = function(name, lang) {
+  try {
+    var p, codenames = registeredLocales[lang.toLowerCase()];
+    for (p in codenames) {
+      if (codenames.hasOwnProperty(p)) {
+        console.log(removeDiacritics(name.toLowerCase()));
+        console.log(removeDiacritics(codenames[p].toLowerCase()));
+        if (removeDiacritics(codenames[p].toLowerCase()) === removeDiacritics(name.toLowerCase())) {
           return p;
         }
       }
@@ -195,11 +220,25 @@ exports.getAlpha2Codes = function() {
 
 /*
  * @param name name
- * @param lang language for country name
+ * @param lang language for nationality name
  * @return ISO 3166-1 alpha-3 or undefined
  */
 exports.getAlpha3Code = function(name, lang) {
   var alpha2 = this.getAlpha2Code(name, lang);
+  if (alpha2) {
+    return this.toAlpha3(alpha2);
+  } else {
+    return undefined;
+  }
+};
+
+/*
+ * @param name name
+ * @param lang language for nationality name
+ * @return ISO 3166-1 alpha-3 or undefined
+ */
+exports.getSimpleAlpha3Code = function(name, lang) {
+  var alpha2 = this.getSimpleAlpha2Code(name, lang);
   if (alpha2) {
     return this.toAlpha3(alpha2);
   } else {
