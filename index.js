@@ -173,7 +173,6 @@ exports.getNames = function(lang) {
  */
 exports.getAlpha2Code = function(name, lang) {
   try {
-    console.log(registeredLocales);
     var p, codenames = registeredLocales[lang.toLowerCase()];
     for (p in codenames) {
       if (codenames.hasOwnProperty(p)) {
@@ -198,8 +197,6 @@ exports.getSimpleAlpha2Code = function(name, lang) {
     var p, codenames = registeredLocales[lang.toLowerCase()];
     for (p in codenames) {
       if (codenames.hasOwnProperty(p)) {
-        console.log(removeDiacritics(name.toLowerCase()));
-        console.log(removeDiacritics(codenames[p].toLowerCase()));
         if (removeDiacritics(codenames[p].toLowerCase()) === removeDiacritics(name.toLowerCase())) {
           return p;
         }
