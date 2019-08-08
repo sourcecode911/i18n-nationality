@@ -6,7 +6,6 @@ var locales = [
 ];
 
 for (var i = 0; i < locales.length; i++) {
-    console.log(locales);
   library.registerLocale(locales[i]);
 }
 
