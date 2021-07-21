@@ -1,11 +1,10 @@
-[![CircleCI](https://circleci.com/gh/sourcecode911/i18n-nationality/tree/master.svg?style=svg)](https://circleci.com/gh/sourcecode911/i18n-nationality/tree/master)
-[![npm version](https://badge.fury.io/js/i18n-nationality.svg)](https://badge.fury.io/js/i18n-nationality)
-![GitHub All Releases](https://img.shields.io/github/downloads/sourcecode911/i18n-nationality/total)
-[![Known Vulnerabilities](https://snyk.io//test/github/sourcecode911/i18n-nationality/badge.svg?targetFile=package.json)](https://snyk.io//test/github/sourcecode911/i18n-nationality?targetFile=package.json)
-[![GitHub issues](https://img.shields.io/github/issues/sourcecode911/i18n-nationality)](https://github.com/sourcecode911/i18n-nationality/issues)
-[![License](https://img.shields.io/github/license/sourcecode911/i18n-nationality)](https://github.com/sourcecode911/i18n-nationality/LICENSE)
+[![Known Vulnerabilities](https://snyk.io//test/github/notarise-gov-sg/i18n-nationality/badge.svg?targetFile=package.json)](https://snyk.io//test/github/sourcecode911/i18n-nationality?targetFile=package.json)
+[![GitHub issues](https://img.shields.io/github/issues/notarise-gov-sg/i18n-nationality)](https://github.com/sourcecode911/i18n-nationality/issues)
+[![License](https://img.shields.io/github/license/notarise-gov-sg/i18n-nationality)](https://github.com/sourcecode911/i18n-nationality/LICENSE)
 
 # i18n-nationality
+
+This is a fork of <https://github.com/sourcecode911/i18n-nationality> and published as a separate package, as the base repository seems to not be receiving any new updates.
 
 Nationalities as adjectives mapped to Country codes. This repository is heavily based on the i18n-iso-countries repository by michaelwittig.
 <https://github.com/michaelwittig/node-i18n-iso-countries>
@@ -14,13 +13,13 @@ i18n for nationalities of ISO 3166-1 country codes. We support Alpha-2, Alpha-3 
 
 ## Installing
 
-Install it using npm: `npm install i18n-nationality`
+Install it using npm: `npm install @notarise-gov-sg/i18n-nationality`
 
 ```javascript
 var nationalities = require("i18n-nationality");
 ```
 
-If you use `i18n-nationality` with Node.js your are done. If you use the package in a browser environment you also have to register the languages you want to use to minimize file size.
+If you use `i18n-nationality` with Node.js you are done. If you use the package in a browser environment you also have to register the languages you want to use to minimize file size.
 
 ```javascript
 // Support german & english languages.
