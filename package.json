@@ -32,11 +32,15 @@
     "diacritics": "^1.3.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "assert-plus": "1.0.0",
-    "mocha": "9.0.2",
+    "husky": "^7.0.1",
+    "istanbul": "0.4.5",
     "jshint": "2.10.2",
     "madge": "4.0.1",
-    "istanbul": "0.4.5"
+    "mocha": "9.0.2",
+    "semantic-release": "^17.4.4"
   },
   "main": "entry-node",
   "browser": "index",
@@ -44,20 +48,13 @@
     "node": ">= 6"
   },
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "semantic-release": "semantic-release"
   },
   "bugs": {
     "url": "https://github.com/Notarise-gov-sg/i18n-nationality/issues"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "release": {
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/npm",
-      "@semantic-release/github"
-    ]
   }
 }
