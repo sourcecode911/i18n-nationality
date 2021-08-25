@@ -5,6 +5,7 @@ var locales = [
   require("./langs/en.json"),
   require("./langs/fr.json"),
   require("./langs/no.json"),
+  require("./langs/it.json")
 ];
 
 for (var i = 0; i < locales.length; i++) {
