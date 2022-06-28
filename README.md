@@ -170,7 +170,7 @@ console.log(nationalities.isValid("US"), nationalities.isValid("USA"), nationali
 To add a language:
 
 -   add a json file under langs/
--   add the language to the `data` object in enty-node.js at the top
+-   add the language to the `data` object in entry-node.js at the top
 -   add language to section **Supported languages** in README.md
 -   run `npm install && make test` to make sure that tests are passing
 -   open a PR on GitHub
