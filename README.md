@@ -57,6 +57,7 @@ console.log(nationalities.getNames("en")); // { 'AF': 'Afghan', 'AL': 'Albanian'
 -   `no`: Norwegian
 -   `it`: Italian
 -   `fi`: Finnish
+-   `nl`: Dutch
 
 [List of ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 
@@ -169,7 +170,7 @@ console.log(nationalities.isValid("US"), nationalities.isValid("USA"), nationali
 To add a language:
 
 -   add a json file under langs/
--   add the language to the `data` object in enty-node.js at the top
+-   add the language to the `data` object in entry-node.js at the top
 -   add language to section **Supported languages** in README.md
 -   run `npm install && make test` to make sure that tests are passing
 -   open a PR on GitHub
