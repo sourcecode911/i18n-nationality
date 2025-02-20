@@ -1,0 +1,9 @@
+{
+      "editor.formatOnSave": false,
+      "editor.formatOnPaste": false,
+      "editor.formatOnType": false,
+      "editor.formatOnSaveMode": "modifications",
+      "editor.formatOnSaveOptions": {
+            "tabSize": 4
+      }
+}
