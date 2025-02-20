@@ -1,6 +1,7 @@
 var library = require("./index");
 
 var locales = [
+  require("./langs/ar.json"),
   require("./langs/de.json"),
   require("./langs/en.json"),
   require("./langs/fr.json"),
@@ -12,7 +13,7 @@ var locales = [
 ];
 
 for (var i = 0; i < locales.length; i++) {
-  library.registerLocale(locales[i]);
+	library.registerLocale(locales[i]);
 }
 
 module.exports = library;
